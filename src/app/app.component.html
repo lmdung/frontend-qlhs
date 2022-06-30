@@ -1,4 +1,7 @@
-<!-- NG-ZORRO -->
-<div class="w-1/4">
-  <button nz-button nzType="primary" class="shadow-default" *transloco="let t">{{ t('hello') }}</button>
+<div id="app-frame">
+  <nz-spin class="global-spinner"
+          [nzSpinning]="true"
+          nzSize="large">
+    <router-outlet></router-outlet>
+  </nz-spin>
 </div>

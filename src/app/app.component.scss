@@ -4,3 +4,29 @@
   position: relative;
   isolation: isolate;
 }
+
+#app-frame {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  > nz-spin {
+    @apply flex;
+    flex-grow: 1;
+
+    > .ant-spin-container {
+      @apply flex;
+      flex-grow: 1;
+    }
+  }
+}
+
+.global-spinner {
+  @apply min-h-screen;
+  .ant-spin {
+    max-height: unset !important;
+  }
+}
